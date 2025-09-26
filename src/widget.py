@@ -1,6 +1,6 @@
 def mask_account_card(input_string: str) -> str:
     """
-    Маскирует номер карты или счета в зависимости от типа
+    Маскируем номер карты или счета в зависимости от типа
 
     """
     # Разделяем строку на части
@@ -26,25 +26,16 @@ def mask_account_card(input_string: str) -> str:
 
 def get_date(date_string: str) -> str:
     """
-    Преобразует дату из формата ISO в формат ДД.ММ.ГГГГ
+    Преобразуем дату из формата ISO в формат ДД.ММ.ГГГГ
 
-    Args:
-        date_string (str): Дата в формате "2024-03-11T02:26:18.671407"
-
-    Returns:
-        str: Дата в формате "11.03.2024"
     """
     from datetime import datetime
 
     try:
-        # Парсим дату из строки
+        # переносим дату из строки
         dt = datetime.fromisoformat(date_string.replace("Z", "+00:00"))
 
         # Форматируем в нужный формат
         return dt.strftime("%d.%m.%Y")
     except (ValueError, AttributeError):
         return date_string  # Возвращаем исходную строку при ошибке
-
-    # Функции для тестирования
-
-

@@ -4,7 +4,7 @@ from src.masks import get_mask_card_number, get_mask_account
 
 def test_get_mask_card_number():
     assert get_mask_card_number("7000792289606361") == "7000 79** **** 6361"
-    assert get_mask_card_number("1234567890123456") == "1234 56** **** 3456"
+    assert get_mask_card_number("1234567890123458") == "1234 56** **** 3458"
 
 
 def test_get_mask_account():
@@ -14,9 +14,9 @@ def test_get_mask_account():
 
 def test_get_mask_card_number_invalid():
     with pytest.raises(ValueError):
-        get_mask_card_number("123")  # Слишком короткий номер
+        get_mask_card_number("1234")  # Слишком короткий номер
     with pytest.raises(ValueError):
-        get_mask_card_number("abcdefgFhijklmnop")  # Не цифры
+        get_mask_card_number("abcdefghijklmno")  # Не цифры
 
 
 def test_get_mask_account_invalid():
