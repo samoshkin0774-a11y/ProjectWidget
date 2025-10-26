@@ -10,7 +10,7 @@ def mask_account_card(input_string: str) -> str:
     account_type = " ".join(parts[:-1])
     number = parts[-1]
 
-    # Проверяем, является ли это счетом
+    # Проверяем, является ли это счетом.
     if "счет" in account_type.lower() or "Счет" in account_type:
         # Маскировка для счета
         masked_number = f"**{number[-4:]}"

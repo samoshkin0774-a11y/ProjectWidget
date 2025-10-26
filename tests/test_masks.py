@@ -14,7 +14,7 @@ def test_mask_account():
 
 def test_mask_card_number_invalid():
     with pytest.raises(ValueError):
-        get_mask_card_number("1234")  # Слишком короткий номер
+        get_mask_card_number("12345")  # Слишком короткий номер
     with pytest.raises(ValueError):
         get_mask_card_number("abcdefghijklmno")  # Не цифры
 
