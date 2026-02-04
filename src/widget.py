@@ -1,4 +1,5 @@
 from src.masks import get_mask_account, get_mask_card_number
+from datetime import datetime
 
 def mask_account_card(input_string: str) -> str:
     """
@@ -24,7 +25,6 @@ def get_date(date_string: str) -> str:
     Преобразуем дату из формата ISO в формат ДД.ММ.ГГГГ
 
     """
-    from datetime import datetime
 
     dt = datetime.fromisoformat(date_string.replace("Z", "+00:00"))
 
