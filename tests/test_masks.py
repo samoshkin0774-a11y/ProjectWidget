@@ -1,6 +1,6 @@
 from src.masks import get_mask_card_number, get_mask_account
 
-    # Проверяем карты
+    # Проверяем карты.
 
 def test_mask_card_number():
     assert get_mask_card_number("7000792289606361") == "7000 79** **** 6361"
