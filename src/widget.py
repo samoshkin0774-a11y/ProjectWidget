@@ -1,6 +1,7 @@
 from src.masks import get_mask_account, get_mask_card_number
 from datetime import datetime
 
+
 def mask_account_card(input_string: str) -> str:
     """
     Маскируем номер карты или счета
@@ -29,4 +30,3 @@ def get_date(date_string: str) -> str:
     dt = datetime.fromisoformat(date_string.replace("Z", "+00:00"))
 
     return dt.strftime("%d.%m.%Y")
-
