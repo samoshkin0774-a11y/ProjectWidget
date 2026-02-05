@@ -3,7 +3,7 @@ name = "pythonproject"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "Your Name",email = "you@example.com"}
+    {name = "Your Name",email = "you@examplgie.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.13"
@@ -24,6 +24,7 @@ isort = "^6.0.1"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.4.1"
+pytest-cov = "^7.0.0"
 
 [tool.mypy]
 disallow_untyped_defs = true
