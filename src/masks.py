@@ -12,7 +12,7 @@ def get_mask_card_number(card_number: str) -> str:
 
 
 def get_mask_account(account_number: str) -> str:
-    """Маскируем номер банковского счета в формате **XXXX"""
+    """Маскируем номер банковского счета в  формате **XXXX."""
     # Убираем все пробелы
     account_number = account_number.replace(" ", "")
 
